@@ -55,7 +55,7 @@ export default {
       try {
         // Si el array de urls existe (validar para evitar errores)
         if(this.urls!=null){
-          const resultado = await axios.get("https://araucania.wit.la/Araucania-camaras/camarasM.php");
+          const resultado = await axios.get("https://araucania.dev-wit.com/Araucania-camaras/camarasM.php");
           if(this.urls.length!=resultado.data.list.length){
             // Si el resultado es distinto al anterior, actualizar el
             // array de camaras, lo que provoca que tanto la tabla
@@ -70,7 +70,7 @@ export default {
     async fetch() {//busca la lista de buses de las condes***
       try {
         
-        const resultado = await axios.get("https://araucania.wit.la/Araucania-camaras/camarasM.php");
+        const resultado = await axios.get("https://araucania.dev-wit.com/Araucania-camaras/camarasM.php");
         this.urls = resultado.data.list;
         console.log(this.urls);
        
